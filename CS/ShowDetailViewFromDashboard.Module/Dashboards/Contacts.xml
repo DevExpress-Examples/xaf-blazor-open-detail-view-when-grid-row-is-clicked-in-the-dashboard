@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard CurrencyCulture="en-US">
+  <Title Text="Contacts" />
+  <DataSources>
+    <ObjectDataSource ComponentName="dashboardObjectDataSource1">
+      <Name>Contacts</Name>
+      <DataSource Type="ShowDetailViewFromDashboard.Module.BusinessObjects.Contact, ShowDetailViewFromDashboard.Module, Version=1.0.7968.33017, Culture=neutral, PublicKeyToken=null" />
+    </ObjectDataSource>
+  </DataSources>
+  <Items>
+    <Grid ComponentName="gridDashboardItem1" Name="Contacts" DataSource="dashboardObjectDataSource1">
+      <DataItems>
+        <Dimension DataMember="FullName" DefaultId="DataItem_DisplayName" />
+        <Dimension DataMember="Birthday" DefaultId="DataItem_Birthday" />
+        <Dimension DataMember="Email" DefaultId="DataItem_Email" />
+        <Measure DataMember="Oid" SummaryType="Min" DefaultId="DataItem0" />
+      </DataItems>
+      <HiddenMeasures>
+        <Measure DefaultId="DataItem0" />
+      </HiddenMeasures>
+      <GridColumns>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem_DisplayName" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem_Birthday" />
+        </GridDimensionColumn>
+        <GridDimensionColumn>
+          <Dimension DefaultId="DataItem_Email" />
+        </GridDimensionColumn>
+      </GridColumns>
+      <GridOptions />
+    </Grid>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup>
+      <LayoutItem DashboardItem="gridDashboardItem1" Weight="0.5" />
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

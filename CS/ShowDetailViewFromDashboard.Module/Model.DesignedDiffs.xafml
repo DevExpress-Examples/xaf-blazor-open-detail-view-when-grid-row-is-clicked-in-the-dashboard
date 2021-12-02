@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" ?>
+<Application Title="ShowDetailViewFromDashboard">
+  <NavigationItems StartupNavigationItem="Contacts Dashboard">
+    <Items>
+      <Item Id="Reports">
+        <Items>
+          <DashboardNavigationItem Id="Contacts Dashboard" Caption="Contacts Dashboard" DashboardTitle="Contacts" IsNewNode="True" />
+          <Item Id="Dashboards" Removed="True" />
+        </Items>
+      </Item>
+    </Items>
+  </NavigationItems>
+  <Views>
+  </Views>
+</Application>
