@@ -7,6 +7,9 @@
 
 This example demonstrates how to invoke a Detail View when a user clicks a row in [GridDashboardItem](https://docs.devexpress.com/Dashboard/DevExpress.DashboardCommon.GridDashboardItem). In the invoked Detail View, a user can view or edit a [business object](https://docs.devexpress.com/eXpressAppFramework/113664/business-model-design-orm) corresponding to the clicked row.
 
+![chrome_nGcK0qFdu4](https://github.com/DevExpress-Examples/xaf-blazor-open-detail-view-when-grid-row-is-clicked-in-the-dashboard/assets/14300209/aa365b61-91ac-4cd2-9a5e-bec7b8316c9c)
+
+## Implementation Details
 See the following help topic for more information: [Open a Detail View When the Grid Row is Clicked in the Dashboard (Blazor)](https://docs.devexpress.com/eXpressAppFramework/403531/analytics/dashboards/open-a-detail-view-when-the-grid-row-is-clicked-in-the-dashboard-blazor)
 
 <!-- default file list -->
