@@ -12,8 +12,8 @@ See the following help topic for more information: [Open a Detail View When the 
 <!-- default file list -->
 ## Files to Look At
 
-* [customScript.js](./CS/ShowDetailViewFromDashboard.Blazor.Server/wwwroot/js/customScript.js)
-* [BlazorShowDetailViewFromDashboardController.cs](./CS/ShowDetailViewFromDashboard.Module.Blazor/Controllers/BlazorShowDetailViewFromDashboardController.cs)
+* [customScript.js](CS/EF/OpenViewFromDashboardEF/OpenViewFromDashboardEF.Blazor.Server/wwwroot/js/customScript.js)
+* [BlazorShowDetailViewFromDashboardController.cs](CS/EF/OpenViewFromDashboardEF/OpenViewFromDashboardEF.Blazor.Server/Controllers/BlazorShowDetailViewFromDashboardController.cs)
 
 <!-- default file list end --> 
 
