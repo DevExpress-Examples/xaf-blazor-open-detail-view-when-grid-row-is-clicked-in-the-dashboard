@@ -21,6 +21,8 @@
     <PackageReference Include="DevExpress.ExpressApp.Xpo" Version="21.2.*-*" />
     <PackageReference Include="DevExpress.Persistent.Base" Version="21.2.*-*" />
     <PackageReference Include="DevExpress.Persistent.BaseImpl.Xpo" Version="21.2.*-*" />
+    <PackageReference Include="Microsoft.JSInterop" Version="6.0.25" />
+	  
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ShowDetailViewFromDashboard.Module\ShowDetailViewFromDashboard.Module.csproj">
