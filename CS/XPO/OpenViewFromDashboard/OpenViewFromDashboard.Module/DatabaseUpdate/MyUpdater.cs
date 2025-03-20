@@ -1,18 +1,12 @@
-﻿//,new MyUpdater(objectSpace,versionFromDB)
-//            defaultRole.AddNavigationPermission(@"Application/NavigationItems/Items/Default/Items/Contact_ListView", SecurityPermissionState.Allow);
-            //defaultRole.AddTypePermissionsRecursively<Contact>(SecurityOperations.CRUDAccess, SecurityPermissionState.Allow);
-using DevExpress.ExpressApp;
+﻿using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Updating;
-
-using dxTestSolution.Module.BusinessObjects;
-
 using System;
-using dxTestSolution.Module.BusinessObjects;
+using OpenViewFromDashboard.Module.BusinessObjects;
 using DevExpress.ExpressApp.Dashboards;
 using DevExpress.Persistent.BaseImpl;
 using System.Reflection;
 
-namespace dxTestSolution.Module.DatabaseUpdate {
+namespace OpenViewFromDashboard.Module.DatabaseUpdate {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppUpdatingModuleUpdatertopic.aspx
     public class MyUpdater : ModuleUpdater {
         public MyUpdater(IObjectSpace objectSpace, Version currentDBVersion) :
@@ -20,7 +14,7 @@ namespace dxTestSolution.Module.DatabaseUpdate {
         }
         public override void UpdateDatabaseAfterUpdateSchema() {
             base.UpdateDatabaseAfterUpdateSchema();
-			//,new MyUpdater(objectSpace,versionFromDB)
+            //,new MyUpdater(objectSpace,versionFromDB)
             //string name = "MyName";
             //DomainObject1 theObject = ObjectSpace.FindObject<DomainObject1>(CriteriaOperator.Parse("Name=?", name));
             //if(theObject == null) {
@@ -31,14 +25,14 @@ namespace dxTestSolution.Module.DatabaseUpdate {
             if(cnt > 0) {
                 return;
             }
-            for (int i = 0; i < 5; i++) {
-				var contact = ObjectSpace.CreateObject<Contact>();
-				contact.FirstName = "FirstName" + i;
-				contact.LastName = "LastName" + i;
-				contact.Age = i * 10;
+            for(int i = 0; i < 5; i++) {
+                var contact = ObjectSpace.CreateObject<Contact>();
+                contact.FirstName = "FirstName" + i;
+                contact.LastName = "LastName" + i;
+                contact.Age = i * 10;
                 for(int j = 0; j < 2; j++) {
                     var task = ObjectSpace.CreateObject<MyTask>();
-					task.Subject="Subject" + i + " - " + j;
+                    task.Subject = "Subject" + i + " - " + j;
                     task.AssignedTo = contact;
                 }
             }
@@ -48,7 +42,7 @@ namespace dxTestSolution.Module.DatabaseUpdate {
             ObjectSpace.CommitChanges(); //Uncomment this line to persist created object(s).
         }
 
-  
+
 
         public override void UpdateDatabaseBeforeUpdateSchema() {
             base.UpdateDatabaseBeforeUpdateSchema();

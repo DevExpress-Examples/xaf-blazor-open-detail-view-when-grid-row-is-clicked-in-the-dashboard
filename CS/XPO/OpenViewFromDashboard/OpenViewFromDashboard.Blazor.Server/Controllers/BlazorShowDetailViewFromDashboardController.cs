@@ -1,21 +1,27 @@
 ﻿using DevExpress.ExpressApp;
-using DevExpress.ExpressApp.Blazor;
+using DevExpress.ExpressApp.Dashboards.Blazor.Components;
 using DevExpress.Persistent.Base;
-using dxTestSolution.Module.BusinessObjects;
+using OpenViewFromDashboard.Module.BusinessObjects;
 using Microsoft.JSInterop;
 
 namespace OpenViewFromDashboard.Blazor.Server.Controllers;
 public class BlazorShowDetailViewFromDashboardController : ObjectViewController<DetailView, IDashboardData> {
-    private IJSRuntime JSRuntime { get; set; }
+    private string clientId = Guid.NewGuid().ToString();
     private DotNetObjectReference<BlazorShowDetailViewFromDashboardController> controllerReference;
     public BlazorShowDetailViewFromDashboardController() {
         controllerReference = DotNetObjectReference.Create(this);
     }
     protected override void OnActivated() {
         base.OnActivated();
-        var application = (BlazorApplication)Application;
-        JSRuntime = application.ServiceProvider.GetRequiredService<IJSRuntime>();
-        _ = JSRuntime.InvokeVoidAsync("customScript.registerController", controllerReference).Preserve();
+        Application.ServiceProvider.GetRequiredService<IJSRuntime>().InvokeVoidAsync("customScript.registerController", clientId, controllerReference).Preserve();
+        View.CustomizeViewItemControl<BlazorDashboardViewerViewItem>(this, CustomizeDashboardViewerViewItem);
+    }
+    private void CustomizeDashboardViewerViewItem(BlazorDashboardViewerViewItem dashboardViewerViewItem) {
+        dashboardViewerViewItem.ComponentModel.SetAttribute("data-showdetailid", clientId);
+    }
+    protected override void OnDeactivated() {
+        Application.ServiceProvider.GetRequiredService<IJSRuntime>().InvokeVoidAsync("customScript.unregisterController", clientId).Preserve();
+        base.OnDeactivated();
     }
     protected override void Dispose(bool disposing) {
         base.Dispose(disposing);

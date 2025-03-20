@@ -1,18 +1,12 @@
-﻿//,new MyUpdater(objectSpace,versionFromDB)
-//            defaultRole.AddNavigationPermission(@"Application/NavigationItems/Items/Default/Items/Contact_ListView", SecurityPermissionState.Allow);
-            //defaultRole.AddTypePermissionsRecursively<Contact>(SecurityOperations.CRUDAccess, SecurityPermissionState.Allow);
-using DevExpress.ExpressApp;
+﻿using DevExpress.ExpressApp;
 using DevExpress.ExpressApp.Updating;
-
-using dxTestSolution.Module.BusinessObjects;
-
 using System;
-using dxTestSolution.Module.BusinessObjects;
+using OpenViewFromDashboardEF.Module.BusinessObjects;
 using DevExpress.ExpressApp.Dashboards;
 using DevExpress.Persistent.BaseImpl.EF;
 using System.Reflection;
 
-namespace dxTestSolution.Module.DatabaseUpdate {
+namespace OpenViewFromDashboardEF.Module.DatabaseUpdate {
     // For more typical usage scenarios, be sure to check out https://documentation.devexpress.com/eXpressAppFramework/clsDevExpressExpressAppUpdatingModuleUpdatertopic.aspx
     public class MyUpdater : ModuleUpdater {
         public MyUpdater(IObjectSpace objectSpace, Version currentDBVersion) :

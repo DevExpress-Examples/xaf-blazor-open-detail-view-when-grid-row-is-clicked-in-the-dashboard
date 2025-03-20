@@ -9,7 +9,7 @@ using DevExpress.ExpressApp.Updating;
 using DevExpress.ExpressApp.Model.Core;
 using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
-using dxTestSolution.Module.DatabaseUpdate;
+using OpenViewFromDashboardEF.Module.DatabaseUpdate;
 
 namespace OpenViewFromDashboardEF.Module;
 

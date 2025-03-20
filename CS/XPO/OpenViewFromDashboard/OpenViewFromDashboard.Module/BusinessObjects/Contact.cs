@@ -16,7 +16,7 @@ using System.Diagnostics;
 using DevExpress.Persistent.Base.General;
 using DevExpress.ExpressApp.SystemModule;
 
-namespace dxTestSolution.Module.BusinessObjects {
+namespace OpenViewFromDashboard.Module.BusinessObjects {
      [DefaultClassOptions]
 	  
     public class Contact : BaseObject { 

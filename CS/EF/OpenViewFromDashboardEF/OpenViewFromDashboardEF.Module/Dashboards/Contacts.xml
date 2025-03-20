@@ -4,7 +4,7 @@
   <DataSources>
     <ObjectDataSource ComponentName="dashboardObjectDataSource1">
       <Name>Contacts</Name>
-      <DataSource Type="dxTestSolution.Module.BusinessObjects.Contact, ShowDetailViewFromDashboard.Module, Version=1.0.7968.33017, Culture=neutral, PublicKeyToken=null" />
+      <DataSource Type="OpenViewFromDashboardEF.Module.BusinessObjects.Contact, ShowDetailViewFromDashboard.Module, Version=1.0.7968.33017, Culture=neutral, PublicKeyToken=null" />
     </ObjectDataSource>
   </DataSources>
   <Items>

@@ -12,7 +12,7 @@ using DevExpress.ExpressApp.Model.DomainLogics;
 using DevExpress.ExpressApp.Model.NodeGenerators;
 using DevExpress.Xpo;
 using DevExpress.ExpressApp.Xpo;
-using dxTestSolution.Module.DatabaseUpdate;
+using OpenViewFromDashboard.Module.DatabaseUpdate;
 
 namespace OpenViewFromDashboard.Module;
 

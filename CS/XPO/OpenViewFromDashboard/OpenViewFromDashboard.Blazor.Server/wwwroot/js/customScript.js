@@ -1,21 +1,25 @@
 ﻿"use strict";
 
 globalThis.customScript = {
-    showDetailViewController: null,
+    showDetailViewControllers: {},
     onBeforeRender: function (dashboardControl) {
         const viewerApi = dashboardControl.findExtension("viewerApi");
-        viewerApi.on("itemClick", globalThis.customScript.processItemClick);
+        viewerApi.on("itemClick", globalThis.customScript.processItemClick.bind(dashboardControl));
     },
-    registerController: function (controller) {
-        globalThis.customScript.showDetailViewController = controller;
+    registerController: function (key, controller) {
+        globalThis.customScript.showDetailViewControllers[key] = controller;
+    },
+    unregisterController: function (key) {
+        delete globalThis.customScript.showDetailViewControllers[key];
     },
     processItemClick: function (args) {
         const itemData = args.getData(),
             dataSlice = itemData.getSlice(args.getAxisPoint()),
             oidMeasure = dataSlice.getMeasures().find((measure) => measure.dataMember === 'Oid').id,
             measureValue = dataSlice.getMeasureValue(oidMeasure),
-            objectId = measureValue.getValue();
-        globalThis.customScript.showDetailViewController.invokeMethodAsync("ShowDetailView", objectId);
+            objectId = measureValue.getValue(),
+            controllerId = this.element().dataset["showdetailid"];
+        globalThis.customScript.showDetailViewControllers[controllerId].invokeMethodAsync("ShowDetailView", objectId);
     }
 }
 
