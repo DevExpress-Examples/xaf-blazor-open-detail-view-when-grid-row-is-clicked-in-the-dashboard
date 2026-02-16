@@ -28,7 +28,7 @@ See the following help topic for more information: [Open a Detail View When the 
 
 [How to open DetailView by clicking a grid row in the integrated Dashboard (WinForms and ASP.NET Web Forms)](https://github.com/DevExpress-Examples/XAF_how-to-open-detailview-by-clicking-a-grid-row-in-the-integrated-dashboard-t488012) 
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-blazor-open-detail-view-when-grid-row-is-clicked-in-the-dashboard&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=xaf-blazor-open-detail-view-when-grid-row-is-clicked-in-the-dashboard&~~~was_helpful=no)
 
