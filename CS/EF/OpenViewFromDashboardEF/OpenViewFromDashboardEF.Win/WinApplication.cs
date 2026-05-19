@@ -20,7 +20,6 @@ namespace OpenViewFromDashboardEF.Win
             SplashScreen = new DXSplashScreen(typeof(XafSplashScreen), new DefaultOverlayFormOptions());
             ApplicationName = "OpenViewFromDashboardEF";
             CheckCompatibilityType = DevExpress.ExpressApp.CheckCompatibilityType.DatabaseSchema;
-            UseOldTemplates = false;
             DatabaseVersionMismatch += OpenViewFromDashboardEFWindowsFormsApplication_DatabaseVersionMismatch;
             CustomizeLanguagesList += OpenViewFromDashboardEFWindowsFormsApplication_CustomizeLanguagesList;
         }
