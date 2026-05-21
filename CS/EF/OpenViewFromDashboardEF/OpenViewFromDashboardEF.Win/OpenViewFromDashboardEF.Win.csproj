@@ -28,15 +28,15 @@
     <EmbeddedResource Include="Images\ExpressAppLogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.ExpressApp" Version="25.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="25.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Dashboards.Win" Version="25.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.EFCore" Version="25.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="25.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Win" Version="25.2.*-*" />
-    <PackageReference Include="DevExpress.ExpressApp.Win.Design" Version="25.2.*-*" />
-    <PackageReference Include="DevExpress.Win.Dashboard" Version="25.2.*-*" />
-    <PackageReference Include="DevExpress.Win.Design" Version="25.2.*-*" />
+    <PackageReference Include="DevExpress.ExpressApp" Version="25.2.1-alpha-25302" />
+    <PackageReference Include="DevExpress.ExpressApp.CodeAnalysis" Version="25.2.1-alpha-25302" />
+    <PackageReference Include="DevExpress.ExpressApp.Dashboards.Win" Version="25.2.1-alpha-25302" />
+    <PackageReference Include="DevExpress.ExpressApp.EFCore" Version="25.2.1-alpha-25302" />
+    <PackageReference Include="DevExpress.ExpressApp.Validation.Win" Version="25.2.1-alpha-25302" />
+    <PackageReference Include="DevExpress.ExpressApp.Win" Version="25.2.1-alpha-25302" />
+    <PackageReference Include="DevExpress.ExpressApp.Win.Design" Version="25.2.1-alpha-25302" />
+    <PackageReference Include="DevExpress.Win.Dashboard" Version="25.2.1-alpha-25302" />
+    <PackageReference Include="DevExpress.Win.Design" Version="25.2.1-alpha-25302" />
     
   </ItemGroup>
   <ItemGroup>
